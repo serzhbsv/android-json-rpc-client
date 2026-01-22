@@ -21,10 +21,10 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: |
-           cd RPC-ANDROID
-           chmod +x gradlew
+      run: chmod +x gradlew
+      
     - name: Build with Gradle
       run: | 
+            cd RPC-ANDROID
             ls -l
             ./gradlew build
