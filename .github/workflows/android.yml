@@ -21,7 +21,8 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: cd ./RPC-ANDROID
+      run: |
+           cd /home/runner/work/RPC-ANDROID
            chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
