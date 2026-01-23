@@ -42,5 +42,5 @@ jobs:
       with:
         name: Build Debug android-json-rpc-client
         path: |
-               RPC-ANDROID/app/build/apk/app-debug.apk
+               RPC-ANDROID/app/build/outputs/apk/app-debug.apk
             
