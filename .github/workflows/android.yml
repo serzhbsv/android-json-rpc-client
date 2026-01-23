@@ -23,7 +23,7 @@ jobs:
       with:
          cmdline-tools-version: 8512546
     - run: |
-           sdkmanager tools platform-tools
+           sdkmanager --install "platform-tools"
            sdkmanager --install "platforms;android-23"
            
     - name: Grant execute permission for gradlew
