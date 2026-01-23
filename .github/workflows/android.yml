@@ -1,4 +1,4 @@
-name: Android CI
+name: Build Debug android-json-rpc-client
 
 on:
   push:
@@ -38,3 +38,9 @@ jobs:
             cd RPC-ANDROID
             ls -l
             ./gradlew assembleDebug
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Build Debug android-json-rpc-client
+        path: |
+               RPC-ANDROID/app/build/apk/app-debug.apk
+            
