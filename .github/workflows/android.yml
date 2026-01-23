@@ -35,4 +35,4 @@ jobs:
       run: | 
             cd RPC-ANDROID
             ls -l
-            ./gradlew build
+            ./gradlew assembleDebug
