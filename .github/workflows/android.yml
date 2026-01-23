@@ -23,7 +23,7 @@ jobs:
       with:
          cmdline-tools-version: 8512546
     - run: |
-           sdkmanager packages "build-tools;23.0.2"
+           sdkmanager --install "build-tools;23.0.2"
            sdkmanager --install "platform-tools"
            sdkmanager --install "platforms;android-23"
            
