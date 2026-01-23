@@ -10,7 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+     contents: write
+     discussions: write
     steps:
     - uses: actions/checkout@v4
     - name: set up JDK 8
@@ -43,4 +45,9 @@ jobs:
         name: Build Debug android-json-rpc-client
         path: |
                RPC-ANDROID/app/build/outputs/apk/app-debug.apk
-            
+               
+    - name: debugkeybuild
+      uses: softprops/action-gh-release@v2
+      if: github.ref_type == 'tag'
+      with:
+        files: RPC-ANDROID/app/build/outputs/apk/app-debug.apk
